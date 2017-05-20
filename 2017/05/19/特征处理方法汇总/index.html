@@ -15,16 +15,18 @@
     <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
 
-  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
+  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="特征处理方法汇总">
 <meta property="og:url" content="https://geekqi.github.io/2017/05/19/特征处理方法汇总/index.html">
 <meta property="og:site_name" content="YangQi">
-<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
-<meta property="og:updated_time" content="2017-05-20T07:45:33.000Z">
+<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
+<meta property="og:image" content="https://geekqi.github.io/Users/GeekQi/Documents/MyBlog/blog/source/image/Feature.png">
+<meta property="og:updated_time" content="2017-05-20T10:33:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="特征处理方法汇总">
-<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
+<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
+<meta name="twitter:image" content="https://geekqi.github.io/Users/GeekQi/Documents/MyBlog/blog/source/image/Feature.png">
 
   
 
@@ -150,7 +152,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-离散值处理"><span class="toc-text">1.离散值处理</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-类别变量处理"><span class="toc-text">1.类别变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数值变量处理"><span class="toc-text">2.数值变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文本变量处理"><span class="toc-text">3.文本变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-缺失值处理"><span class="toc-text">4.缺失值处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-长尾特征处理"><span class="toc-text">5.长尾特征处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理方法比较："><span class="toc-text">处理方法比较：</span></a></li></ol>
   </div>
 
 
@@ -203,18 +205,42 @@
 
   <div class="article-content">
     
-      <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新]</p>
-<h3 id="1-离散值处理"><a href="#1-离散值处理" class="headerlink" title="1.离散值处理"></a>1.离散值处理</h3><ul>
-<li>方法1：OneHot编码<ul>
-<li>适用情况：不同颜色</li>
-<li>使用方法：pandas：get_dummies()。<a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
+      <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
+<h3 id="1-类别变量处理"><a href="#1-类别变量处理" class="headerlink" title="1.类别变量处理"></a>1.类别变量处理</h3><ul>
+<li>处理原则：先标签化， 再二值化编码。 </li>
+<li>处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。</li>
+<li>处理情况：不同颜色， 不同国家</li>
+<li>处理方法：scikit-learn的LabelBinarizer()和OneHotEncoder()。pandas的<strong>DataFrameMapper</strong>，get_dummies()。DataFrameMapper结合 sklearn 的Transformer类，来进行列变换。等</li>
 </ul>
-</li>
-<li>方法2：数值映射<ul>
-<li>使用情况：不同尺寸</li>
-<li>使用方法：pandas：map()。<a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
+<h3 id="2-数值变量处理"><a href="#2-数值变量处理" class="headerlink" title="2.数值变量处理"></a>2.数值变量处理</h3><ul>
+<li>处理原则：只需正规化和标准化</li>
+<li>处理目的：最好也进行离散化</li>
+<li>处理情况：不同尺寸， 不同数值大小</li>
+<li>处理方法：pandas：map()。 scikit-learn的Normalizer和StandardScaler</li>
 </ul>
-</li>
+<h3 id="3-文本变量处理"><a href="#3-文本变量处理" class="headerlink" title="3.文本变量处理"></a>3.文本变量处理</h3><ul>
+<li>处理原则：词频， n-gram，TF-IDF[减小停用词权重]</li>
+<li>处理目的：</li>
+<li>处理情况：用户评论／新闻摘要／视频弹幕等</li>
+<li>处理方法：scikit-learn的corpus和CountVectorizer和CountVectorizer(ngram_range=(1, 2))和TfidfVectorizer</li>
+</ul>
+<h3 id="4-缺失值处理"><a href="#4-缺失值处理" class="headerlink" title="4.缺失值处理"></a>4.缺失值处理</h3><ul>
+<li>处理原则：</li>
+<li>处理目的：</li>
+<li>处理方法：填充／丢弃／看作新类别</li>
+</ul>
+<h3 id="5-长尾特征处理"><a href="#5-长尾特征处理" class="headerlink" title="5.长尾特征处理"></a>5.长尾特征处理</h3><p>常见于数值类型的变量</p>
+<ul>
+<li>处理原则：</li>
+<li>处理目的：将变量的分布相对均衡</li>
+<li>处理方法：log(x+1)处理</li>
+</ul>
+<h3 id="处理方法比较："><a href="#处理方法比较：" class="headerlink" title="处理方法比较："></a>处理方法比较：</h3><p><img src="/Users/GeekQi/Documents/MyBlog/blog/source/image/Feature.png" alt="Feature"></p>
+<p>参考自：</p>
+<ul>
+<li><a href="http://www.cbdio.com/BigData/2016-08/16/content_5187960.htm" target="_blank" rel="external">举例</a></li>
+<li><a href="http://www.cbdio.com/BigData/2016-08/31/content_5227769.htm" target="_blank" rel="external">举例</a></li>
+<li><a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
 </ul>
 
     
