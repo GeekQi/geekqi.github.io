@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 
-  <html class="light page-archives2017">
+  <html class="light page-post">
 
 
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017 | YangQi</title>
+  <title>特征处理方法汇总 | YangQi</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,12 +15,16 @@
     <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YangQi">
-<meta property="og:url" content="https://geekqi.github.io/archives/2017/index.html">
+  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="特征处理方法汇总">
+<meta property="og:url" content="https://geekqi.github.io/2017/05/19/特征处理方法汇总/index.html">
 <meta property="og:site_name" content="YangQi">
+<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
+<meta property="og:updated_time" content="2017-05-20T07:45:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YangQi">
+<meta name="twitter:title" content="特征处理方法汇总">
+<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新] 1.离散值处理 方法1：OneHot编码 适用情况：不同颜色 使用方法：pandas：get_dummies()。举例   方法2：数值映射 使用情况：不同尺寸 使用方法：pandas：map()。举例">
 
   
 
@@ -83,12 +87,8 @@
     <span id="toolbox-mobile" class="toolbox-mobile">发现</span>
   
 
-  <div class="content content-archive">
-  <div class="page-header">
-
-  
-
-  
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
     <a class="toolbox-entry" href="/">
       <span class="toolbox-entry-text">发现</span>
@@ -145,59 +145,104 @@
   </div>
 
 
-
-  <div class="box-blog-info">
-    <a class="avatar" href="/">
-      <img src="/images/avatar.jpg" alt="" />
-    </a>
-    <div class="info">
-      <h3 class="name" style="font-family: calligraffittiregular">
-        null
-      </h3>
-      <div class="slogan">
-        Change is the only thing does not change in the World ~
-      </div>
-    </div>
-  </div>
-
 </div>
 
 
-  <div class="post-list-box archive-body">
-    <ul class="list-post">  <li class="item-year item item-title item-title-2">
-    <a href="/archives/2017" class="text-year">
-      2017
-      <i class="icon-ji"></i>
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-离散值处理"><span class="toc-text">1.离散值处理</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-特征处理方法汇总" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">特征处理方法汇总</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.05.19</span>
+      </span>
+
       
-    </a>
-  </li>
-<li class="item-post item">
-  <span class="post-date">05-19</span>
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>YangQi</span>
+        </span>
+      
 
-  
-  <a class="post-title" href="/2017/05/19/特征处理方法汇总/">特征处理方法汇总</a>
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/特征处理/">特征处理</a>
+  </span>
 
 
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="https://geekqi.github.io/2017/05/19/特征处理方法汇总/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新]</p>
+<h3 id="1-离散值处理"><a href="#1-离散值处理" class="headerlink" title="1.离散值处理"></a>1.离散值处理</h3><ul>
+<li>方法1：OneHot编码<ul>
+<li>适用情况：不同颜色</li>
+<li>使用方法：pandas：get_dummies()。<a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
+</ul>
 </li>
-<li class="item-post item">
-  <span class="post-date">05-19</span>
-
-  
-  <a class="post-title" href="/2017/05/19/hello-world/">Hello Change, YangQi</a>
-
-
+<li>方法2：数值映射<ul>
+<li>使用情况：不同尺寸</li>
+<li>使用方法：pandas：map()。<a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
+</ul>
 </li>
 </ul>
-  </div>
 
-  <div class="archive-footer">
     
-
   </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/05/19/hello-world/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
 </div>
 
 
-
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
 
 
 
@@ -263,6 +308,44 @@
 </div>
 
 
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'geekqi';
+    
+    var disqus_url = 'https://geekqi.github.io/2017/05/19/特征处理方法汇总/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//geekqi.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
 
   
 
