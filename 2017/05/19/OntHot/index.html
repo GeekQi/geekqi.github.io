@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello Change, YangQi | YangQi</title>
+  <title>OneHot Encoding | YangQi</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,16 +15,16 @@
     <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="特征处理 - 之 - 离散值处理：离散值的编码： [当前条件下] 量化无意义：比如颜色。则用OneHot 编码 [当前条件下] 量化有意义：比如尺寸。则用数值映射用pandas 进行One-Hot编码：123456789101112131415161718192021222324252627#!/usr/bin/env python# -*- coding: utf-8 -*-&quot;&quot;&quot;Created">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Change, YangQi">
-<meta property="og:url" content="https://geekqi.github.io/2017/05/19/hello-world/index.html">
+<meta property="og:title" content="OneHot Encoding">
+<meta property="og:url" content="https://geekqi.github.io/2017/05/19/OntHot/index.html">
 <meta property="og:site_name" content="YangQi">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-19T09:50:51.000Z">
+<meta property="og:description" content="特征处理 - 之 - 离散值处理：离散值的编码： [当前条件下] 量化无意义：比如颜色。则用OneHot 编码 [当前条件下] 量化有意义：比如尺寸。则用数值映射用pandas 进行One-Hot编码：123456789101112131415161718192021222324252627#!/usr/bin/env python# -*- coding: utf-8 -*-&quot;&quot;&quot;Created">
+<meta property="og:updated_time" content="2017-05-20T06:55:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Change, YangQi">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="OneHot Encoding">
+<meta name="twitter:description" content="特征处理 - 之 - 离散值处理：离散值的编码： [当前条件下] 量化无意义：比如颜色。则用OneHot 编码 [当前条件下] 量化有意义：比如尺寸。则用数值映射用pandas 进行One-Hot编码：123456789101112131415161718192021222324252627#!/usr/bin/env python# -*- coding: utf-8 -*-&quot;&quot;&quot;Created">
 
   
 
@@ -150,15 +150,15 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#特征处理-之-离散值处理："><span class="toc-text">特征处理 - 之 - 离散值处理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#离散值的编码："><span class="toc-text">离散值的编码：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用pandas-进行One-Hot编码："><span class="toc-text">用pandas 进行One-Hot编码：</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-hello-world" class="article article-type-post" itemprop="blogPost">
+   <article id="post-OntHot" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">Hello Change, YangQi</h1>
+    <h1 class="post-title">OneHot Encoding</h1>
 
     <div class="article-meta">
       <span>
@@ -176,7 +176,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Blog/">Blog</a>
+    <a class="article-category-link" href="/categories/特征处理/">特征处理</a>
   </span>
 
 
@@ -184,7 +184,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="https://geekqi.github.io/2017/05/19/hello-world/#disqus_thread"></a>
+          <a href="https://geekqi.github.io/2017/05/19/OntHot/#disqus_thread"></a>
         </span>
       
 
@@ -203,15 +203,12 @@
 
   <div class="article-content">
     
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      <h3 id="特征处理-之-离散值处理："><a href="#特征处理-之-离散值处理：" class="headerlink" title="特征处理 - 之 - 离散值处理："></a>特征处理 - 之 - 离散值处理：</h3><h4 id="离散值的编码："><a href="#离散值的编码：" class="headerlink" title="离散值的编码："></a>离散值的编码：</h4><ol>
+<li>[当前条件下] 量化无意义：比如颜色。则用OneHot 编码</li>
+<li>[当前条件下] 量化有意义：比如尺寸。则用数值映射<h3 id="用pandas-进行One-Hot编码："><a href="#用pandas-进行One-Hot编码：" class="headerlink" title="用pandas 进行One-Hot编码："></a>用pandas 进行One-Hot编码：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="string">"""</span></div><div class="line">Created on 20/5/2017 2:21 PM</div><div class="line">@author: GeekQi - No Plan B</div><div class="line">        </div><div class="line">"""</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line">df = pd.DataFrame([</div><div class="line">    [<span class="string">'green'</span>, <span class="string">'M'</span>, <span class="number">10.1</span>, <span class="string">'class1'</span>],</div><div class="line">    [<span class="string">'red'</span>, <span class="string">'L'</span>, <span class="number">13.5</span>, <span class="string">'class2'</span>],</div><div class="line">    [<span class="string">'blue'</span>, <span class="string">'XL'</span>, <span class="number">15.3</span>, <span class="string">'class1'</span>]])</div><div class="line"><span class="keyword">print</span> df</div><div class="line">df.columns = [<span class="string">'color'</span>, <span class="string">'size'</span>, <span class="string">'prize'</span>, <span class="string">'class label'</span>]</div><div class="line"><span class="keyword">print</span> df</div><div class="line">size_mapping = &#123;</div><div class="line">    <span class="string">'XL'</span>: <span class="number">3</span>,</div><div class="line">    <span class="string">'L'</span>: <span class="number">2</span>,</div><div class="line">    <span class="string">'M'</span>: <span class="number">1</span>&#125;</div><div class="line">df[<span class="string">'size'</span>] = df[<span class="string">'size'</span>].map(size_mapping)</div><div class="line"><span class="keyword">print</span> df</div><div class="line">class_mapping = &#123;label: idx <span class="keyword">for</span> idx, label <span class="keyword">in</span> enumerate(set(df[<span class="string">'class label'</span>]))&#125;</div><div class="line"><span class="keyword">print</span> class_mapping</div><div class="line">df[<span class="string">'class label'</span>] = df[<span class="string">'class label'</span>].map(class_mapping)</div><div class="line"><span class="keyword">print</span> df</div><div class="line">pd.get_dummies(df)</div><div class="line"><span class="keyword">print</span> pd.get_dummies(df)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>More info: <a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">OneHot Encoding</a></p>
 
     
   </div>
@@ -222,10 +219,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="hide pull-left" href="/">
+    <a class="show pull-left" href="/2017/05/19/hello-world/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/05/19/OntHot/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -317,7 +314,7 @@
   <script>
     var disqus_shortname = 'geekqi';
     
-    var disqus_url = 'https://geekqi.github.io/2017/05/19/hello-world/';
+    var disqus_url = 'https://geekqi.github.io/2017/05/19/OntHot/';
     
     (function(){
       var dsq = document.createElement('script');
