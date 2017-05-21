@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>特征处理方法汇总 | YangQi</title>
+  <title>数据挖掘四：特征处理方法汇总 | YangQi</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -17,14 +17,14 @@
 
   <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="特征处理方法汇总">
-<meta property="og:url" content="https://geekqi.github.io/2017/05/19/特征处理方法汇总/index.html">
+<meta property="og:title" content="数据挖掘四：特征处理方法汇总">
+<meta property="og:url" content="https://geekqi.github.io/2017/05/19/数据挖掘特征处理方法汇总/index.html">
 <meta property="og:site_name" content="YangQi">
 <meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
 <meta property="og:image" content="https://geekqi.github.io/Users/GeekQi/Documents/MyBlog/blog/source/image/Feature.png">
-<meta property="og:updated_time" content="2017-05-20T10:33:36.000Z">
+<meta property="og:updated_time" content="2017-05-21T08:23:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="特征处理方法汇总">
+<meta name="twitter:title" content="数据挖掘四：特征处理方法汇总">
 <meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 1.类别变量处理 处理原则：先标签化， 再二值化编码。  处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。 处理情况：不同颜色， 不同国家 处理方法：scikit-learn的LabelBinarizer()和OneHotEnc">
 <meta name="twitter:image" content="https://geekqi.github.io/Users/GeekQi/Documents/MyBlog/blog/source/image/Feature.png">
 
@@ -151,16 +151,16 @@
 
 
   <div id="toc" class="toc-article">
-    <strong class="toc-title">Posts List</strong>
+    <strong class="toc-title">文章目录</strong>
     <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-类别变量处理"><span class="toc-text">1.类别变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数值变量处理"><span class="toc-text">2.数值变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文本变量处理"><span class="toc-text">3.文本变量处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-缺失值处理"><span class="toc-text">4.缺失值处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-长尾特征处理"><span class="toc-text">5.长尾特征处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理方法比较："><span class="toc-text">处理方法比较：</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-特征处理方法汇总" class="article article-type-post" itemprop="blogPost">
+   <article id="post-数据挖掘特征处理方法汇总" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">特征处理方法汇总</h1>
+    <h1 class="post-title">数据挖掘四：特征处理方法汇总</h1>
 
     <div class="article-meta">
       <span>
@@ -178,7 +178,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/特征处理/">特征处理</a>
+    <a class="article-category-link" href="/categories/数据挖掘/">数据挖掘</a>
   </span>
 
 
@@ -186,7 +186,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="https://geekqi.github.io/2017/05/19/特征处理方法汇总/#disqus_thread"></a>
+          <a href="https://geekqi.github.io/2017/05/19/数据挖掘特征处理方法汇总/#disqus_thread"></a>
         </span>
       
 
@@ -268,7 +268,7 @@
   <span id="cover" class="cover hide"></span>
   <div id="modal-dialog" class="modal-dialog hide-dialog">
     <div class="modal-header">
-      <span id="close" class="btn-close">Close</span>
+      <span id="close" class="btn-close">关闭</span>
     </div>
     <hr>
     <div class="modal-body">
@@ -338,7 +338,7 @@
   <script>
     var disqus_shortname = 'geekqi';
     
-    var disqus_url = 'https://geekqi.github.io/2017/05/19/特征处理方法汇总/';
+    var disqus_url = 'https://geekqi.github.io/2017/05/19/数据挖掘特征处理方法汇总/';
     
     (function(){
       var dsq = document.createElement('script');
