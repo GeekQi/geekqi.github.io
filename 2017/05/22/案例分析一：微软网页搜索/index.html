@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>机器学习案例分析一：微软网页搜索 | YangQi</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
+  
+
+  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习案例分析一：微软网页搜索">
+<meta property="og:url" content="https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/index.html">
+<meta property="og:site_name" content="YangQi">
+<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
+<meta property="og:updated_time" content="2017-05-22T03:16:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习案例分析一：微软网页搜索">
+<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">发现</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">发现</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-提高网页搜索结果的相关性"><span class="toc-text">A.提高网页搜索结果的相关性</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-案例分析一：微软网页搜索" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">机器学习案例分析一：微软网页搜索</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.05.22</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>YangQi</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
+<h3 id="A-提高网页搜索结果的相关性"><a href="#A-提高网页搜索结果的相关性" class="headerlink" title="A.提高网页搜索结果的相关性"></a>A.提高网页搜索结果的相关性</h3><ul>
+<li>基本思想：<strong>快速实现的能力</strong>：<strong>快速处理</strong></li>
+<li>实现方法：Boosted Decision Trees</li>
+<li>方法可解决问题：<ul>
+<li>排序：置顶最相关网页</li>
+<li>分类：垃圾邮件分类</li>
+<li>回归分析：房价预估</li>
+</ul>
+</li>
+<li>研究／产品周期开发案例：<ul>
+<li>挑战：1.提出对的问题， 2.很好的验证</li>
+<li>解决方法：从实际问题出发</li>
+<li>发出请求：<ul>
+<li>高效扫描索引中所有文件，快速过滤器过滤。将候选文档数减少到可控规模</li>
+<li>对每个候选文档，生成几千个特征表示与查询内容的相关度<ul>
+<li>比如把特征列表映射到一个对查询相关的文档进行编码的分数</li>
+</ul>
+</li>
+<li>结合过滤处理，再排序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>总结：整体过程良性循环，工程和产品的需求推动研究的进展，而研究为产品开发提供了新的机遇</li>
+</ul>
+<p>参考自：</p>
+<ul>
+<li><a href="http://www.msra.cn/zh-cn/research/machine-learning-group/machine-learning-for-industry-a-case-study.aspx" target="_blank" rel="external">微软搜索案例</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'geekqi';
+    
+    var disqus_url = 'https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//geekqi.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

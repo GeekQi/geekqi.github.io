@@ -15,16 +15,18 @@
     <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
 
-  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总] A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmo">
+  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总 A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmoi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据挖掘二.1：分类模型汇总">
 <meta property="og:url" content="https://geekqi.github.io/2017/05/21/数据挖掘二.1分类模型汇总/index.html">
 <meta property="og:site_name" content="YangQi">
-<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总] A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmo">
-<meta property="og:updated_time" content="2017-05-21T14:08:36.000Z">
+<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总 A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmoi">
+<meta property="og:image" content="https://geekqi.github.io/2017/05/21/数据挖掘二.1分类模型汇总/MeiTuan.png">
+<meta property="og:updated_time" content="2017-05-21T14:40:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据挖掘二.1：分类模型汇总">
-<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总] A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmo">
+<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 具体问题的分类参见数据挖掘二：问题分类汇总 A.LogisticRegression模型简介逻辑回归 适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面 常用算法：逻辑回归／支持向量机「都属于有监督学习」 注意事项：模型效果往往与所用特征紧密相关  1.模型 sigmoi">
+<meta name="twitter:image" content="https://geekqi.github.io/2017/05/21/数据挖掘二.1分类模型汇总/MeiTuan.png">
 
   
 
@@ -150,7 +152,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-LogisticRegression模型简介"><span class="toc-text">A.LogisticRegression模型简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#逻辑回归"><span class="toc-text">逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-模型"><span class="toc-text">1.模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-延伸"><span class="toc-text">2.延伸</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-应用：美团如何用LR解决实际问题"><span class="toc-text">3.应用：美团如何用LR解决实际问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-多标签问题"><span class="toc-text">3.多标签问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-回归问题"><span class="toc-text">B.回归问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-单回归问题"><span class="toc-text">1.单回归问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多回归问题"><span class="toc-text">2.多回归问题</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-LogisticRegression模型简介"><span class="toc-text">A.LogisticRegression模型简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#逻辑回归"><span class="toc-text">逻辑回归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-模型"><span class="toc-text">1.模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-延伸"><span class="toc-text">2.延伸</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-应用：美团如何用LR解决实际问题"><span class="toc-text">3.应用：美团如何用LR解决实际问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-总结"><span class="toc-text">4.总结</span></a></li></ol></li></ol>
   </div>
 
 
@@ -204,13 +206,13 @@
   <div class="article-content">
     
       <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
-<p>具体问题的分类参见<a href="https://geekqi.github.io/2017/05/20/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E9%97%AE%E9%A2%98%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/">数据挖掘二：问题分类汇总</a>]</p>
+<p>具体问题的分类参见<a href="https://geekqi.github.io/2017/05/20/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E9%97%AE%E9%A2%98%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/">数据挖掘二：问题分类汇总</a></p>
 <h3 id="A-LogisticRegression模型简介"><a href="#A-LogisticRegression模型简介" class="headerlink" title="A.LogisticRegression模型简介"></a>A.LogisticRegression模型简介</h3><h4 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h4><ul>
 <li>适用情况：预测是否点击特定商品／判断用户性别／预测用户是否会购买给定的品类／判断评论是正面还是负面</li>
 <li>常用算法：逻辑回归／支持向量机<strong>「都属于有监督学习」</strong></li>
 <li>注意事项：模型效果往往与<strong>所用特征</strong>紧密相关</li>
 </ul>
-<h5 id="1-模型"><a href="#1-模型" class="headerlink" title="1.模型"></a>1.模型</h5><ul>
+<h4 id="1-模型"><a href="#1-模型" class="headerlink" title="1.模型"></a>1.模型</h4><ul>
 <li>sigmoid函数</li>
 <li>决策函数<ul>
 <li>目的：机器学习模型就是将决策函数限定在某一组条件下， 这组条件决定了模型的假设空间。</li>
@@ -235,7 +237,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-延伸"><a href="#2-延伸" class="headerlink" title="2.延伸"></a>2.延伸</h5><ul>
+<h4 id="2-延伸"><a href="#2-延伸" class="headerlink" title="2.延伸"></a>2.延伸</h4><ul>
 <li>生成模型和判别模型<ul>
 <li>LR：判别模型：直接对条件概率P(y|x)建模， 不关心背后数据分布P(y|x)</li>
 <li>高斯贝叶斯(Gaussian Naive Bayes):生成模型：先对数据的联合分布建模， 再通过贝叶斯公式计算样本属于各个类别的后验概率</li>
@@ -251,26 +253,27 @@
 </ul>
 </li>
 </ul>
-<h5 id="3-应用：美团如何用LR解决实际问题"><a href="#3-应用：美团如何用LR解决实际问题" class="headerlink" title="3.应用：美团如何用LR解决实际问题"></a>3.应用：美团如何用LR解决实际问题</h5><ul>
+<h4 id="3-应用：美团如何用LR解决实际问题"><a href="#3-应用：美团如何用LR解决实际问题" class="headerlink" title="3.应用：美团如何用LR解决实际问题"></a>3.应用：美团如何用LR解决实际问题</h4><ul>
 <li>情况：预测未来是否购买：1/0。</li>
-<li>选用特征货</li>
+<li>选用特征如下 <img src="/2017/05/21/数据挖掘二.1分类模型汇总/MeiTuan.png" alt="MeiTuan"><ul>
+<li>其中：特征跨度30天，标签2天。训练数据7千万量级。</li>
 </ul>
-<ul>
+</li>
+<li>处理过程：<ul>
+<li>品类聚合：人工把相似的小品类聚合起来：18个较为典型的品类集合</li>
+<li>构建训练集：如果用户给定时间购买某一品类集合， 作为正例</li>
+<li>LR训练：有了训练集，用Spark的LR算法对每个品类训练一个二分类模型，迭代100次40分钟。每个模型2分钟。测试集AUC也0.8以上。</li>
+<li>训练结果：训练好模型会保留下来， 用于预测各个品类上购买概率。 预测结果会用于推荐等场景。</li>
+<li>实际转化：由于不同品类间正负例分布不同。尝试不同采样方法。最终目标：提高下单率等线上指标。经过一些参数调优，品类偏好特征为推荐和排序带来超过1%的下单率提升</li>
+<li>心得：由于LR模型简单高效， 易于实现，可为后续模型优化提供不错baseline， 在排序等服务中也使用了LR模型。</li>
+</ul>
+</li>
 <li>适用情况：微博用户情感分析、用户对理财产品偏好性分析。 比如：通过微博分析用户情感属于喜怒哀乐等哪类， 将理财产品的用户群体分为偏好型／温和型／厌恶型</li>
 <li>判断方法：标签y有多维：每一维代表一个标签， 取值只有两个， 比如0-1。 或者， y只有一维， 取值有多个。</li>
 </ul>
-<h4 id="3-多标签问题"><a href="#3-多标签问题" class="headerlink" title="3.多标签问题"></a>3.多标签问题</h4><ul>
-<li>适用情况：音乐的标签划分。 比如：标签集合：{独奏，协奏，浪漫主义，印象主义}，「月光」属于{独奏，印象主义}，「保卫黄河」属于{协奏}。</li>
-<li>判断方法：标签y有多维， 与多分类不同在于： 本本可以同时属于多个标签。 </li>
-</ul>
-<h3 id="B-回归问题"><a href="#B-回归问题" class="headerlink" title="B.回归问题"></a>B.回归问题</h3><h4 id="1-单回归问题"><a href="#1-单回归问题" class="headerlink" title="1.单回归问题"></a>1.单回归问题</h4><ul>
-<li>适用情况：比如：股价预测</li>
-<li>判断方法：y只有一维， 取值为连续值。</li>
-</ul>
-<h4 id="2-多回归问题"><a href="#2-多回归问题" class="headerlink" title="2.多回归问题"></a>2.多回归问题</h4><ul>
-<li>适用情况：比如：天气预报：气温、湿度、降雨量</li>
-<li>判断方法：y有多维， 取值为连续值</li>
-<li>​</li>
+<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h4><ul>
+<li>LR的数学模型和求解相对简洁。通过对特征离散化和其他映射，逻辑回归可处理非线性问题， 是强大分类器。</li>
+<li>在实际应用中， 拿到许多低层次的特征时， 可考虑LR解决问题</li>
 </ul>
 <p>参考自：</p>
 <ul>
