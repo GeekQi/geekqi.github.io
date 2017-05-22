@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>机器学习案例分析一：微软网页搜索 | YangQi</title>
+  <title>生财有道一-某所“项目”. | YangQi</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,16 +15,16 @@
     <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
 
-  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
+  <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 技术／产品／变现 收益：小几十K／几天 团队：3人 项目所用工具／技术：Python 总结： 1.初期：需求沟通：要求：明确需求及基本劳务报酬 2.中期： 任务分配领取 任务阶段监督 任务阶段汇总   3.后期： 任务交付验收 劳务报酬确定     注意： 1.书面材料等洽谈内容一定保留 2.报酬材料等一定落实到具体截">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习案例分析一：微软网页搜索">
-<meta property="og:url" content="https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/index.html">
+<meta property="og:title" content="生财有道一-某所“项目”.">
+<meta property="og:url" content="https://geekqi.github.io/2017/05/22/生财有道一-某所“项目”/index.html">
 <meta property="og:site_name" content="YangQi">
-<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
-<meta property="og:updated_time" content="2017-05-22T03:16:46.000Z">
+<meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 技术／产品／变现 收益：小几十K／几天 团队：3人 项目所用工具／技术：Python 总结： 1.初期：需求沟通：要求：明确需求及基本劳务报酬 2.中期： 任务分配领取 任务阶段监督 任务阶段汇总   3.后期： 任务交付验收 劳务报酬确定     注意： 1.书面材料等洽谈内容一定保留 2.报酬材料等一定落实到具体截">
+<meta property="og:updated_time" content="2017-05-22T07:41:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习案例分析一：微软网页搜索">
-<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.提高网页搜索结果的相关性 基本思想：快速实现的能力：快速处理 实现方法：Boosted Decision Trees 方法可解决问题： 排序：置顶最相关网页 分类：垃圾邮件分类 回归分析：房价预估   研究／产品周期开发案例： 挑战：1.提出对的问题， 2.很好的验证 解决方法：从实际问题出发 发出请求： 高效扫描">
+<meta name="twitter:title" content="生财有道一-某所“项目”.">
+<meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] 技术／产品／变现 收益：小几十K／几天 团队：3人 项目所用工具／技术：Python 总结： 1.初期：需求沟通：要求：明确需求及基本劳务报酬 2.中期： 任务分配领取 任务阶段监督 任务阶段汇总   3.后期： 任务交付验收 劳务报酬确定     注意： 1.书面材料等洽谈内容一定保留 2.报酬材料等一定落实到具体截">
 
   
 
@@ -150,15 +150,15 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Posts List</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-提高网页搜索结果的相关性"><span class="toc-text">A.提高网页搜索结果的相关性</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术／产品／变现"><span class="toc-text">技术／产品／变现</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-案例分析一：微软网页搜索" class="article article-type-post" itemprop="blogPost">
+   <article id="post-生财有道一-某所“项目”" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">机器学习案例分析一：微软网页搜索</h1>
+    <h1 class="post-title">生财有道一-某所“项目”.</h1>
 
     <div class="article-meta">
       <span>
@@ -176,7 +176,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+    <a class="article-category-link" href="/categories/生财有道/">生财有道</a>
   </span>
 
 
@@ -184,7 +184,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/#disqus_thread"></a>
+          <a href="https://geekqi.github.io/2017/05/22/生财有道一-某所“项目”/#disqus_thread"></a>
         </span>
       
 
@@ -204,34 +204,30 @@
   <div class="article-content">
     
       <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
-<h3 id="A-提高网页搜索结果的相关性"><a href="#A-提高网页搜索结果的相关性" class="headerlink" title="A.提高网页搜索结果的相关性"></a>A.提高网页搜索结果的相关性</h3><ul>
-<li>基本思想：<strong>快速实现的能力</strong>：<strong>快速处理</strong></li>
-<li>实现方法：Boosted Decision Trees</li>
-<li>方法可解决问题：<ul>
-<li>排序：置顶最相关网页</li>
-<li>分类：垃圾邮件分类</li>
-<li>回归分析：房价预估</li>
+<h3 id="技术／产品／变现"><a href="#技术／产品／变现" class="headerlink" title="技术／产品／变现"></a>技术／产品／变现</h3><ul>
+<li>收益：小几十K／几天</li>
+<li>团队：3人</li>
+<li>项目所用工具／技术：Python</li>
+<li>总结：<ul>
+<li>1.初期：需求沟通：要求：明确需求及基本劳务报酬</li>
+<li>2.中期：<ul>
+<li>任务分配领取</li>
+<li>任务阶段监督</li>
+<li>任务阶段汇总</li>
 </ul>
 </li>
-<li>研究／产品周期开发案例：<ul>
-<li>挑战：1.提出对的问题， 2.很好的验证</li>
-<li>解决方法：从实际问题出发</li>
-<li>发出请求：<ul>
-<li>高效扫描索引中所有文件，快速过滤器过滤。将候选文档数减少到可控规模</li>
-<li>对每个候选文档，生成几千个特征表示与查询内容的相关度<ul>
-<li>比如把特征列表映射到一个对查询相关的文档进行编码的分数</li>
-</ul>
-</li>
-<li>结合过滤处理，再排序</li>
+<li>3.后期：<ul>
+<li>任务交付验收</li>
+<li>劳务报酬确定</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>总结：整体过程良性循环，工程和产品的需求推动研究的进展，而研究为产品开发提供了新的机遇</li>
+<li>注意：<ul>
+<li>1.书面材料等<strong>洽谈内容</strong>一定保留</li>
+<li>2.报酬材料等一定落实到具体<strong>截止日期</strong></li>
 </ul>
-<p>参考自：</p>
-<ul>
-<li><a href="http://www.msra.cn/zh-cn/research/machine-learning-group/machine-learning-for-industry-a-case-study.aspx" target="_blank" rel="external">微软搜索案例</a></li>
+</li>
 </ul>
 
     
@@ -329,7 +325,7 @@
   <script>
     var disqus_shortname = 'geekqi';
     
-    var disqus_url = 'https://geekqi.github.io/2017/05/22/案例分析一：微软网页搜索/';
+    var disqus_url = 'https://geekqi.github.io/2017/05/22/生财有道一-某所“项目”/';
     
     (function(){
       var dsq = document.createElement('script');
