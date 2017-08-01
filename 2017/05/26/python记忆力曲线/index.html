@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html>
 <head>
   <meta charset="utf-8">
   
   <title>python记忆力曲线 | YangQi</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
   
-    <meta name="keywords" content="YangQi,数据分析,数据挖掘,机器学习,自然语言处理" />
   
-
+  
+  
   <meta name="description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.python基础，看看哈1.python是什么？语言：解释型、交互性、面向对象 2.python中文编码怎么搞？默认：ASCII。  需要：开头加入：# -*- coding:UTF-8 -*- 3.python 标识符怎么写？包括：字母、数字[不可开头]、下划线[单下划线表示不能直接访问类属性、需要类接口访问，不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python记忆力曲线">
@@ -27,185 +21,121 @@
 <meta name="twitter:title" content="python记忆力曲线">
 <meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.python基础，看看哈1.python是什么？语言：解释型、交互性、面向对象 2.python中文编码怎么搞？默认：ASCII。  需要：开头加入：# -*- coding:UTF-8 -*- 3.python 标识符怎么写？包括：字母、数字[不可开头]、下划线[单下划线表示不能直接访问类属性、需要类接口访问，不">
 <meta name="twitter:image" content="https://geekqi.github.io/2017/05/26/python记忆力曲线/loop-over-python-list-animation.gif">
-
   
-
+    <link rel="alternate" href="/atom.xml" title="YangQi" type="application/atom+xml">
   
-    <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/css/images/favicon.ico">
   
-
-  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
-
-
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-    <link rel="stylesheet" href="/css/personal-style.css">
-  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
 
-  
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
 
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+  <script src="/js/jquery-3.1.1.min.js"></script>
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
-
-
-  
-    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
-
-  
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
 </head>
 
-<body>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
-    <span id="toolbox-mobile" class="toolbox-mobile">发现</span>
-  
 
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">发现</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="ROUND_RECT"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="ROUND_RECT"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="ROUND_RECT"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="ROUND_RECT"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="YangQi" rel="home"> YangQi </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
   </div>
+</header>
 
 
-</div>
-
-
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-python基础，看看哈"><span class="toc-text">A.python基础，看看哈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-python是什么？"><span class="toc-text">1.python是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-python中文编码怎么搞？"><span class="toc-text">2.python中文编码怎么搞？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-python-标识符怎么写？"><span class="toc-text">3.python 标识符怎么写？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-python引号用几个？"><span class="toc-text">4.python引号用几个？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-python-注释用什么"><span class="toc-text">5.python 注释用什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-python等待用户输入"><span class="toc-text">6.python等待用户输入?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-python多变量赋值？"><span class="toc-text">7.python多变量赋值？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-python-元组能像列表一样更新么？"><span class="toc-text">8.python 元组能像列表一样更新么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-python字典创建、赋值、取值、取键，好写不？"><span class="toc-text">9.python字典创建、赋值、取值、取键，好写不？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-python-类型转换怎么搞？"><span class="toc-text">10.python 类型转换怎么搞？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-python的数据类型怎么查看？"><span class="toc-text">11.python的数据类型怎么查看？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-python的位运算符怎么写呢？"><span class="toc-text">12.python的位运算符怎么写呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-python的逻辑运算符怎么写，不是位、不是算数运算符？"><span class="toc-text">13.python的逻辑运算符怎么写，不是位、不是算数运算符？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-python成员运算符，表示什么意思啊？"><span class="toc-text">14.python成员运算符，表示什么意思啊？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-python身份运算符，用来做什么呢？"><span class="toc-text">15.python身份运算符，用来做什么呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-python的is-和-有啥区别么？"><span class="toc-text">16.python的is 和==有啥区别么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-python-if语句立个flag？"><span class="toc-text">17.python if语句立个flag？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-python-while-循环，这个例子不错，还有flag立，竟然用到else"><span class="toc-text">19.python while 循环，这个例子不错，还有flag立，竟然用到else</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-python-for字符串、迭代、else、enumerate遍历、质数打印"><span class="toc-text">20.python for字符串、迭代、else、enumerate遍历、质数打印</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-python循环嵌套。。。好复杂的样子？思路-未理解"><span class="toc-text">21.python循环嵌套。。。好复杂的样子？思路[未理解]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-python的pass：不做事情。。"><span class="toc-text">21.python的pass：不做事情。。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-python的数学函数-基本函数"><span class="toc-text">22.python的数学函数-基本函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-python随机数函数"><span class="toc-text">23.python随机数函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-python三角函数"><span class="toc-text">24.python三角函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25-python字符串的一系列操作。。听多，听过"><span class="toc-text">25.python字符串的一系列操作。。听多，听过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26-python的list的一系列操作，很多很熟练"><span class="toc-text">26.python的list的一系列操作，很多很熟练</span></a></li></ol></li></ol>
-  </div>
-
-
-
-<div class="content content-post CENTER">
-   <article id="post-python记忆力曲线" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">python记忆力曲线</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2017.05.26</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>YangQi</span>
-        </span>
-      
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/分类/python记忆力/">python记忆力</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="https://geekqi.github.io/2017/05/26/python记忆力曲线/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
-
-      
-      
-    </div>
-  </header>
-
-  <div class="article-content">
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-python记忆力曲线" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-      <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      python记忆力曲线
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/26/python记忆力曲线/" class="article-date">
+	  <time datetime="2017-05-26T02:33:21.000Z" itemprop="datePublished">May 26, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/python记忆力/">python记忆力</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
 <h2 id="A-python基础，看看哈"><a href="#A-python基础，看看哈" class="headerlink" title="A.python基础，看看哈"></a>A.python基础，看看哈</h2><h3 id="1-python是什么？"><a href="#1-python是什么？" class="headerlink" title="1.python是什么？"></a>1.python是什么？</h3><p>语言：<a href="http://www.runoob.com/python/python-intro.html" target="_blank" rel="external">解释型、交互性、面向对象</a></p>
 <h3 id="2-python中文编码怎么搞？"><a href="#2-python中文编码怎么搞？" class="headerlink" title="2.python中文编码怎么搞？"></a>2.python中文编码怎么搞？</h3><p>默认：ASCII。 </p>
 <p>需要：<a href="http://www.runoob.com/python/python-chinese-encoding.html" target="_blank" rel="external">开头加入：# -*- coding:UTF-8 -*-</a></p>
@@ -615,158 +545,197 @@
 </tbody>
 </table>
 <h3 id="26-python的list的一系列操作，很多很熟练"><a href="#26-python的list的一系列操作，很多很熟练" class="headerlink" title="26.python的list的一系列操作，很多很熟练"></a>26.python的list的一系列操作，很多很熟练</h3>
-    
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/python记忆力/">python记忆力</a>
+
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/31/核心技能get！令人发指！/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          核心技能get！令人发指！
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/22/生财有道一-某所“项目”/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">生财有道一-某所“项目”.</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-   
-
-   
-
-
-
-</div>
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-python基础，看看哈"><span class="nav-number">1.</span> <span class="nav-text">A.python基础，看看哈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-python是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">1.python是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-python中文编码怎么搞？"><span class="nav-number">1.2.</span> <span class="nav-text">2.python中文编码怎么搞？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-python-标识符怎么写？"><span class="nav-number">1.3.</span> <span class="nav-text">3.python 标识符怎么写？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-python引号用几个？"><span class="nav-number">1.4.</span> <span class="nav-text">4.python引号用几个？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-python-注释用什么"><span class="nav-number">1.5.</span> <span class="nav-text">5.python 注释用什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-python等待用户输入"><span class="nav-number">1.6.</span> <span class="nav-text">6.python等待用户输入?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-python多变量赋值？"><span class="nav-number">1.7.</span> <span class="nav-text">7.python多变量赋值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-python-元组能像列表一样更新么？"><span class="nav-number">1.8.</span> <span class="nav-text">8.python 元组能像列表一样更新么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-python字典创建、赋值、取值、取键，好写不？"><span class="nav-number">1.9.</span> <span class="nav-text">9.python字典创建、赋值、取值、取键，好写不？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-python-类型转换怎么搞？"><span class="nav-number">1.10.</span> <span class="nav-text">10.python 类型转换怎么搞？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-python的数据类型怎么查看？"><span class="nav-number">1.11.</span> <span class="nav-text">11.python的数据类型怎么查看？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-python的位运算符怎么写呢？"><span class="nav-number">1.12.</span> <span class="nav-text">12.python的位运算符怎么写呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-python的逻辑运算符怎么写，不是位、不是算数运算符？"><span class="nav-number">1.13.</span> <span class="nav-text">13.python的逻辑运算符怎么写，不是位、不是算数运算符？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-python成员运算符，表示什么意思啊？"><span class="nav-number">1.14.</span> <span class="nav-text">14.python成员运算符，表示什么意思啊？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-python身份运算符，用来做什么呢？"><span class="nav-number">1.15.</span> <span class="nav-text">15.python身份运算符，用来做什么呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-python的is-和-有啥区别么？"><span class="nav-number">1.16.</span> <span class="nav-text">16.python的is 和==有啥区别么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-python-if语句立个flag？"><span class="nav-number">1.17.</span> <span class="nav-text">17.python if语句立个flag？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-python-while-循环，这个例子不错，还有flag立，竟然用到else"><span class="nav-number">1.18.</span> <span class="nav-text">19.python while 循环，这个例子不错，还有flag立，竟然用到else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-python-for字符串、迭代、else、enumerate遍历、质数打印"><span class="nav-number">1.19.</span> <span class="nav-text">20.python for字符串、迭代、else、enumerate遍历、质数打印</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-python循环嵌套。。。好复杂的样子？思路-未理解"><span class="nav-number">1.20.</span> <span class="nav-text">21.python循环嵌套。。。好复杂的样子？思路[未理解]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-python的pass：不做事情。。"><span class="nav-number">1.21.</span> <span class="nav-text">21.python的pass：不做事情。。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-python的数学函数-基本函数"><span class="nav-number">1.22.</span> <span class="nav-text">22.python的数学函数-基本函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-python随机数函数"><span class="nav-number">1.23.</span> <span class="nav-text">23.python随机数函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-python三角函数"><span class="nav-number">1.24.</span> <span class="nav-text">24.python三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-python字符串的一系列操作。。听多，听过"><span class="nav-number">1.25.</span> <span class="nav-text">25.python字符串的一系列操作。。听多，听过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-python的list的一系列操作，很多很熟练"><span class="nav-number">1.26.</span> <span class="nav-text">26.python的list的一系列操作，很多很熟练</span></a></li></ol></li></ol>
+    
     </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
+  </aside>
+</section>
         
-          <li class="item-toolbox">
-            <a
-              class="ROUND_RECT"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="ROUND_RECT"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="ROUND_RECT"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="ROUND_RECT"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
+      </div>
 
     </div>
-  </div>
-</div>
-
-
-
+    <!-- <nav id="mobile-nav">
   
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
-
-  <script>
-    var disqus_shortname = 'geekqi';
-    
-    var disqus_url = 'https://geekqi.github.io/2017/05/26/python记忆力曲线/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-
-  <script id="dsq-count-scr" src="//geekqi.disqus.com/count.js" async></script>
-
-
-
-    
-
-
-
-
-    
-
-    
-	
-  </div>
-
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
   
 
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 YangQi All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
     }
-
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
+  });
 </script>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
