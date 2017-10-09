@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>最大似然到EM | YangQi</title>
+  <title>最大似然到EM | YangQi&#39;s Coding Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -13,14 +13,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大似然到EM">
 <meta property="og:url" content="https://geekqi.github.io/2017/05/21/最大似然到EM/index.html">
-<meta property="og:site_name" content="YangQi">
+<meta property="og:site_name" content="YangQi&#39;s Coding Time">
 <meta property="og:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.最大似然 问题：需要调查学校男生／女生身高分布 要求：抽样后得到的似然函数最大 似然函数：给定输出x时，关于参数θ的似然函数L(θ|x)（在数值上）等于给定参数θ后变量X的概率：L(θ|x)=P(X=x|θ). 求解最值：偏导／梯度   总结：根据结果反推使得该结果出现可能性最大的条件，作为估计值。 步骤： 写出似">
 <meta property="og:updated_time" content="2017-05-22T03:22:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大似然到EM">
 <meta name="twitter:description" content="注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出] A.最大似然 问题：需要调查学校男生／女生身高分布 要求：抽样后得到的似然函数最大 似然函数：给定输出x时，关于参数θ的似然函数L(θ|x)（在数值上）等于给定参数θ后变量X的概率：L(θ|x)=P(X=x|θ). 求解最值：偏导／梯度   总结：根据结果反推使得该结果出现可能性最大的条件，作为估计值。 步骤： 写出似">
   
-    <link rel="alternate" href="/atom.xml" title="YangQi" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="YangQi&#39;s Coding Time" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -55,16 +55,38 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
           <h1 class="site-title">
             
-              <a href="/" title="YangQi" rel="home"> YangQi </a>
+              <a href="/" title="YangQi&#39;s Coding Time" rel="home"> YangQi&#39;s Coding Time </a>
             
           </h1>
           
@@ -81,7 +103,7 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Kategorien</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
                     
@@ -217,7 +239,7 @@
 <nav id="article-nav">
   
     <a href="/2017/05/22/案例分析一：微软网页搜索/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           机器学习案例分析一：微软网页搜索
@@ -227,7 +249,7 @@
   
   
     <a href="/2017/05/21/数据挖掘二.1分类模型汇总/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">数据挖掘二.1：分类模型汇总</div>
     </a>
   
@@ -269,7 +291,7 @@
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2017 YangQi All Rights Reserved.
+	      &copy; 2017 YangQi&#39;s Coding Time All Rights Reserved.
         
             <span id="busuanzi_container_site_uv">
               本站访客数<span id="busuanzi_value_site_uv"></span>人次  
@@ -295,6 +317,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
