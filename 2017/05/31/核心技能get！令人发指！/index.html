@@ -55,32 +55,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -140,7 +118,7 @@
     <div class="article-meta">
       
 	<a href="/2017/05/31/核心技能get！令人发指！/" class="article-date">
-	  <time datetime="2017-05-31T02:29:15.000Z" itemprop="datePublished">May 31, 2017</time>
+	  <time datetime="2017-05-31T10:12:01.000Z" itemprop="datePublished">May 31, 2017</time>
 	</a>
 
       
@@ -238,17 +216,17 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/22/baidu_verify_m4cIjhcLJ9/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/08/进攻是最好的防御/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          「进攻」是最好的「防御」
         
       </div>
     </a>
   
   
-    <a href="/2017/05/26/python记忆力曲线/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/31/python记忆力曲线/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">python记忆力曲线</div>
     </a>
@@ -317,9 +295,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

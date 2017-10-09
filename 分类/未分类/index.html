@@ -51,32 +51,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -137,13 +115,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2017/05/21/最大似然到EM/" class="archive-article-date">
-		  <time datetime="2017-05-21T14:48:21.000Z" itemprop="datePublished">May 21, 2017</time>
+      <a href="/2017/05/22/最大似然到EM/" class="archive-article-date">
+		  <time datetime="2017-05-22T03:22:11.000Z" itemprop="datePublished">May 22, 2017</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/05/21/最大似然到EM/">最大似然到EM</a>
+      <a class="archive-article-title" href="/2017/05/22/最大似然到EM/">最大似然到EM</a>
     </h1>
   
 
@@ -271,6 +249,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2017/06/08/进攻是最好的防御/">「进攻」是最好的「防御」</a></h6>
+              <span>June 8, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2017/05/31/核心技能get！令人发指！/">核心技能get！令人发指！</a></h6>
               <span>May 31, 2017</span>
             </div>
@@ -283,8 +273,8 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/26/python记忆力曲线/">python记忆力曲线</a></h6>
-              <span>May 26, 2017</span>
+              <h6 style="margin: 0;"><a href="/2017/05/31/python记忆力曲线/">python记忆力曲线</a></h6>
+              <span>May 31, 2017</span>
             </div>
 
           </li>
@@ -307,20 +297,8 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/22/案例分析一：微软网页搜索/">机器学习案例分析一：微软网页搜索</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/05/22/最大似然到EM/">最大似然到EM</a></h6>
               <span>May 22, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/05/21/最大似然到EM/">最大似然到EM</a></h6>
-              <span>May 21, 2017</span>
             </div>
 
           </li>
@@ -350,7 +328,7 @@
     <h3 class="widget-title">Archiv</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">13</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -405,9 +383,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

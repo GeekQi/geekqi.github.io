@@ -51,32 +51,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -121,75 +99,6 @@
         
           <section id="main">
   
-    <article id="post-数据挖掘三-数据集划分"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/20/数据挖掘三-数据集划分/">数据挖掘三：数据集划分</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/05/20/数据挖掘三-数据集划分/" class="article-date">
-	  <time datetime="2017-05-20T08:56:08.000Z" itemprop="datePublished">May 20, 2017</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
-<p>数据集划分：训练集／验证集。 或者还需要划分出测试集</p>
-<p>目的：先用训练集／验证集的交叉验证来寻找模型的最优超参数， 模型调优完毕后， 最终用测试集来评估模型的最终效果。</p>
-<h3 id="A-分类问题："><a href="#A-分类问题：" class="headerlink" title="A.分类问题："></a>A.分类问题：</h3><ul>
-<li>划分原则：根据标签划分数据集。比如：每种标签采样多少， 保证训练集和验证集的样本标签分布接近。 </li>
-<li>划分方法：随机采样／分层采样[K折交叉验证]。 可以根据实际业务问题选择合适的采样方式</li>
-</ul>
-<h3 id="B-回归问题"><a href="#B-回归问题" class="headerlink" title="B.回归问题"></a>B.回归问题</h3><ul>
-<li>划分原则：不逊在分类中标签分布不均匀情况。</li>
-<li>划分方法：K折交叉验证</li>
-</ul>
-<blockquote>
-<p>交叉验证</p>
-</blockquote>
-<ul>
-<li>目的：寻找最优的超参数</li>
-<li>方法：sklearn 中的KFold ，train_test_split， metric.score, GridSearchCV等</li>
-</ul>
-<p>参考自：</p>
-<ul>
-<li><a href="http://www.cbdio.com/BigData/2016-08/16/content_5187960.htm" target="_blank" rel="external">举例</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
-
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
     <article id="post-数据挖掘二-问题分类汇总"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -198,7 +107,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/20/数据挖掘二-问题分类汇总/">数据挖掘二：问题分类汇总</a>
+      <a class="article-title" href="/2017/05/21/数据挖掘二-问题分类汇总/">数据挖掘二：问题分类汇总</a>
     </h1>
   
 
@@ -206,8 +115,8 @@
     
     <div class="article-meta">
       
-	<a href="/2017/05/20/数据挖掘二-问题分类汇总/" class="article-date">
-	  <time datetime="2017-05-20T08:24:33.000Z" itemprop="datePublished">May 20, 2017</time>
+	<a href="/2017/05/21/数据挖掘二-问题分类汇总/" class="article-date">
+	  <time datetime="2017-05-21T08:23:51.000Z" itemprop="datePublished">May 21, 2017</time>
 	</a>
 
       
@@ -263,6 +172,146 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-数据挖掘一-误区汇总"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/21/数据挖掘一-误区汇总/">数据挖掘一：误区汇总</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/21/数据挖掘一-误区汇总/" class="article-date">
+	  <time datetime="2017-05-21T08:23:45.000Z" itemprop="datePublished">May 21, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
+<h3 id="1-过于注重训练"><a href="#1-过于注重训练" class="headerlink" title="1.过于注重训练"></a>1.过于注重训练</h3><ul>
+<li>误区分析：没有实战训练，封闭式训练 。只有样本外的模型评分结果才有用！</li>
+<li>解决办法：重抽样：bootstrap、cross-validation、jackknife、leave-one-out…等等。</li>
+</ul>
+<h3 id="2-只依赖一种技术"><a href="#2-只依赖一种技术" class="headerlink" title="2.只依赖一种技术"></a>2.只依赖一种技术</h3><ul>
+<li>误区分析：没有对比就没有好坏， 辩证法的思想</li>
+<li>解决办法：至少和传统：线性回归／线性判别分析做个比较。 使用一系列好的工具和方法。 每种带来最多5%～10%的改进。</li>
+</ul>
+<h3 id="3-关注错的目标"><a href="#3-关注错的目标" class="headerlink" title="3.关注错的目标"></a>3.关注错的目标</h3><ul>
+<li>误区分析：分类算法用分类精度衡量， 但实际几乎不看，因为不是关注的目标</li>
+<li>解决办法：项目目标[比如欺诈电话分析， 重点不是分类，而是如何描述正常的特征，然后据此发现异常]／模型目标[计算机如何改善业务， 不仅仅模型计算精度]</li>
+</ul>
+<h3 id="4-过度依赖数据"><a href="#4-过度依赖数据" class="headerlink" title="4.过度依赖数据"></a>4.过度依赖数据</h3><ul>
+<li>误区分析：如果数据+工具可以解决，要人干什么。[兼听则明， 偏听则暗]</li>
+<li>解决办法：对数据处理结果分析</li>
+</ul>
+<h3 id="5-抽样有问题"><a href="#5-抽样有问题" class="headerlink" title="5.抽样有问题"></a>5.抽样有问题</h3><ul>
+<li>误区分析：没有保证抽样的随机性， 人为提高原始数据的权重</li>
+<li>解决办法：注意随机性，以及模型的现实可靠性。</li>
+</ul>
+<ul>
+<li>处理方法：scikit-learn的LabelBinarizer()和OneHotEncoder()。pandas的get_dummies()。等</li>
+</ul>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
+
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-数据挖掘三-数据集划分"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/21/数据挖掘三-数据集划分/">数据挖掘三：数据集划分</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/21/数据挖掘三-数据集划分/" class="article-date">
+	  <time datetime="2017-05-21T08:23:35.000Z" itemprop="datePublished">May 21, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
+<p>数据集划分：训练集／验证集。 或者还需要划分出测试集</p>
+<p>目的：先用训练集／验证集的交叉验证来寻找模型的最优超参数， 模型调优完毕后， 最终用测试集来评估模型的最终效果。</p>
+<h3 id="A-分类问题："><a href="#A-分类问题：" class="headerlink" title="A.分类问题："></a>A.分类问题：</h3><ul>
+<li>划分原则：根据标签划分数据集。比如：每种标签采样多少， 保证训练集和验证集的样本标签分布接近。 </li>
+<li>划分方法：随机采样／分层采样[K折交叉验证]。 可以根据实际业务问题选择合适的采样方式</li>
+</ul>
+<h3 id="B-回归问题"><a href="#B-回归问题" class="headerlink" title="B.回归问题"></a>B.回归问题</h3><ul>
+<li>划分原则：不逊在分类中标签分布不均匀情况。</li>
+<li>划分方法：K折交叉验证</li>
+</ul>
+<blockquote>
+<p>交叉验证</p>
+</blockquote>
+<ul>
+<li>目的：寻找最优的超参数</li>
+<li>方法：sklearn 中的KFold ，train_test_split， metric.score, GridSearchCV等</li>
+</ul>
+<p>参考自：</p>
+<ul>
+<li><a href="http://www.cbdio.com/BigData/2016-08/16/content_5187960.htm" target="_blank" rel="external">举例</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
+
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -280,7 +329,7 @@
     <div class="article-meta">
       
 	<a href="/2017/05/19/hello-world/" class="article-date">
-	  <time datetime="2017-05-19T08:11:54.000Z" itemprop="datePublished">May 19, 2017</time>
+	  <time datetime="2017-05-19T09:50:51.000Z" itemprop="datePublished">May 19, 2017</time>
 	</a>
 
       
@@ -307,89 +356,6 @@
       
 	<span class="ico-folder"></span>
     <a class="article-category-link" href="/分类/Blog/">Blog</a>
-
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-数据挖掘四-特征处理方法汇总"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/19/数据挖掘四-特征处理方法汇总/">数据挖掘四：特征处理方法汇总</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/05/19/数据挖掘四-特征处理方法汇总/" class="article-date">
-	  <time datetime="2017-05-19T08:11:54.000Z" itemprop="datePublished">May 19, 2017</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注：为个人学习总结需要，如有侵权，请您指出。[持续更新， 如有错误，请您指出]</p>
-<h3 id="1-类别变量处理"><a href="#1-类别变量处理" class="headerlink" title="1.类别变量处理"></a>1.类别变量处理</h3><ul>
-<li>处理原则：先标签化， 再二值化编码。 </li>
-<li>处理目的：标签化：将字段的原始值(字符串／不连续数字等)转化成连续的整数值， 再将整数值二值化编码。 如果原始值是整数， 则直接二值化即可。</li>
-<li>处理情况：不同颜色， 不同国家</li>
-<li>处理方法：scikit-learn的LabelBinarizer()和OneHotEncoder()。pandas的<strong>DataFrameMapper</strong>，get_dummies()。DataFrameMapper结合 sklearn 的Transformer类，来进行列变换。等</li>
-</ul>
-<h3 id="2-数值变量处理"><a href="#2-数值变量处理" class="headerlink" title="2.数值变量处理"></a>2.数值变量处理</h3><ul>
-<li>处理原则：只需正规化和标准化</li>
-<li>处理目的：最好也进行离散化</li>
-<li>处理情况：不同尺寸， 不同数值大小</li>
-<li>处理方法：pandas：map()。 scikit-learn的Normalizer和StandardScaler</li>
-</ul>
-<h3 id="3-文本变量处理"><a href="#3-文本变量处理" class="headerlink" title="3.文本变量处理"></a>3.文本变量处理</h3><ul>
-<li>处理原则：词频， n-gram，TF-IDF[减小停用词权重]</li>
-<li>处理目的：</li>
-<li>处理情况：用户评论／新闻摘要／视频弹幕等</li>
-<li>处理方法：scikit-learn的corpus和CountVectorizer和CountVectorizer(ngram_range=(1, 2))和TfidfVectorizer</li>
-</ul>
-<h3 id="4-缺失值处理"><a href="#4-缺失值处理" class="headerlink" title="4.缺失值处理"></a>4.缺失值处理</h3><ul>
-<li>处理原则：</li>
-<li>处理目的：</li>
-<li>处理方法：填充／丢弃／看作新类别</li>
-</ul>
-<h3 id="5-长尾特征处理"><a href="#5-长尾特征处理" class="headerlink" title="5.长尾特征处理"></a>5.长尾特征处理</h3><p>常见于数值类型的变量</p>
-<ul>
-<li>处理原则：</li>
-<li>处理目的：将变量的分布相对均衡</li>
-<li>处理方法：log(x+1)处理</li>
-</ul>
-<h3 id="处理方法比较："><a href="#处理方法比较：" class="headerlink" title="处理方法比较： "></a>处理方法比较： <img src="/2017/05/19/数据挖掘四-特征处理方法汇总/Feature.png" alt="Feature"></h3><p>参考自：</p>
-<ul>
-<li><a href="http://www.cbdio.com/BigData/2016-08/16/content_5187960.htm" target="_blank" rel="external">举例</a></li>
-<li><a href="http://www.cbdio.com/BigData/2016-08/31/content_5227769.htm" target="_blank" rel="external">举例</a></li>
-<li><a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">举例</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/分类/数据挖掘/">数据挖掘</a>
 
       
       
@@ -524,6 +490,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2017/06/08/进攻是最好的防御/">「进攻」是最好的「防御」</a></h6>
+              <span>June 8, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2017/05/31/核心技能get！令人发指！/">核心技能get！令人发指！</a></h6>
               <span>May 31, 2017</span>
             </div>
@@ -536,8 +514,8 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/26/python记忆力曲线/">python记忆力曲线</a></h6>
-              <span>May 26, 2017</span>
+              <h6 style="margin: 0;"><a href="/2017/05/31/python记忆力曲线/">python记忆力曲线</a></h6>
+              <span>May 31, 2017</span>
             </div>
 
           </li>
@@ -560,20 +538,8 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/22/案例分析一：微软网页搜索/">机器学习案例分析一：微软网页搜索</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/05/22/最大似然到EM/">最大似然到EM</a></h6>
               <span>May 22, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/05/21/最大似然到EM/">最大似然到EM</a></h6>
-              <span>May 21, 2017</span>
             </div>
 
           </li>
@@ -603,7 +569,7 @@
     <h3 class="widget-title">Archiv</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">13</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -658,9 +624,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
